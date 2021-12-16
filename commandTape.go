@@ -5,6 +5,8 @@ import (
 	"io"
 )
 
+var validCommands []rune = []rune{'<', '>', '+', '-', ',', '.', '[', ']'}
+
 type CommandTape struct {
 	commandPointer int
 	parsedCommands []rune
@@ -29,6 +31,18 @@ func (ct *CommandTape) MoveRight() error {
 
 		if err != nil {
 			return err
+		}
+
+		flag := false
+		for _, validCommand := range validCommands {
+			if r == validCommand {
+				flag = true
+				break
+			}
+		}
+
+		if !flag {
+			return ct.MoveRight()
 		}
 
 		ct.parsedCommands = append(ct.parsedCommands, r)
