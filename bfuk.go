@@ -64,6 +64,7 @@ func (bf *Bfuk) handleCommand(inputReader io.ByteReader, outputWriter io.ByteWri
 func NewBfuk(commandReader io.RuneReader) *Bfuk {
 	return &Bfuk{
 		commandTape: NewCommandTape(commandReader),
+		tape:        NewTape(),
 	}
 }
 
@@ -72,11 +73,13 @@ func (bf *Bfuk) Run(inputReader io.ByteReader, outputWriter io.ByteWriter) error
 		err := bf.commandTape.MoveRight()
 
 		if err != nil {
-			break
+			if err == io.EOF {
+				return nil
+			}
+
+			return err
 		}
 
 		bf.handleCommand(inputReader, outputWriter)
 	}
-
-	return nil
 }

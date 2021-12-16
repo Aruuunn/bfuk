@@ -24,9 +24,7 @@ func (ct *CommandTape) GetCurrentCommand() rune {
 }
 
 func (ct *CommandTape) MoveRight() error {
-	ct.commandPointer++
-
-	if ct.commandPointer == len(ct.parsedCommands) {
+	if ct.commandPointer == len(ct.parsedCommands)-1 {
 		r, _, err := ct.commandReader.ReadRune()
 
 		if err != nil {
@@ -35,6 +33,8 @@ func (ct *CommandTape) MoveRight() error {
 
 		ct.parsedCommands = append(ct.parsedCommands, r)
 	}
+
+	ct.commandPointer++
 
 	return nil
 }
