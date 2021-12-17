@@ -21,6 +21,10 @@
 <img src="https://github.com/ArunMurugan78/bfuk/actions/workflows/releaser.yml/badge.svg" />
 </p>
 
+## What is Brainfuck
+Brainfuck is a minimal esoteric programming language. It provides a 30K 8-bit array that can be modified with 8 different characters. 
+
+For more checkout this [video made by fireship](https://youtu.be/hdHjjBS4cs8).
 
 ## Installation
 
@@ -32,3 +36,5 @@ Checkout the [releases](https://github.com/ArunMurugan78/bfuk/releases/latest) t
  go install github.com/arunmurugan78/bfuk/bfuk@latest
 ```
 
+## License
+This project is licensed under the **MIT** license.
