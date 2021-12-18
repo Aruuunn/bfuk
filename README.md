@@ -26,6 +26,24 @@ Brainfuck is a minimal esoteric programming language. It provides a 30K 8-bit ar
 
 For more checkout this [video made by fireship](https://youtu.be/hdHjjBS4cs8).
 
+## Synopsis
+Run without arguments to get the following help message:
+```bash
+$ bfuk
+
+bfuk 1.0.0
+Description: a Brainf**k programming language interpreter.
+Author: Arun Murugan
+Usage:
+	bfuk [OPTIONS] COMMAND
+Example:
+	bfuk /filepath/filename.bf
+Options:
+  -e string
+    	Execute given string of brainf**k program
+
+```
+
 ## Installation
 
 ### Binary Download
