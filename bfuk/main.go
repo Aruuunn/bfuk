@@ -18,7 +18,7 @@ func main() {
 	var reader *bufio.Reader
 
 	flag.Usage = func() {
-		fmt.Println("Usage:\n\tbfuk [OPTIONS] COMMAND\nExample:\n\tbfuk /filepath/filename.bf\nOptions:")
+		fmt.Println("Usage:\n\tbfuk FILE_PATH\n\tbfuk -e CODE_STRING\nExample:\n\tbfuk ./programs/hello_world.bf\nOptions:")
 		flag.PrintDefaults()
 	}
 
