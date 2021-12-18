@@ -35,9 +35,10 @@ bfuk 1.0.0
 Description: a Brainf**k programming language interpreter.
 Author: Arun Murugan
 Usage:
-	bfuk [OPTIONS] COMMAND
+	bfuk FILE_PATH
+	bfuk -e CODE_STRING
 Example:
-	bfuk /filepath/filename.bf
+	bfuk ./programs/hello_world.bf
 Options:
   -e string
     	Execute given string of brainf**k program
